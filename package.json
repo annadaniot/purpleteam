@@ -10,7 +10,9 @@
     "test": "echo \"Todo: Create tests.\" && exit 0",
     "pretest": "npm run lint",
     "debug": "node --inspect-brk ./bin/purpleteam",
-    "start": "node ./bin/purpleteam"
+    "start": "node ./bin/purpleteam",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -46,7 +48,8 @@
     "purpleteam-logger": "git+ssh://github.com/binarymist/purpleteam-logger.git",
     "request": "^2.87.0",
     "request-promise": "^4.2.2",
-    "sywac": "^1.2.0"
+    "sywac": "^1.2.0",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -57,5 +60,6 @@
   },
   "bin": {
     "purpleteam": "./bin/purpleteam"
-  }
+  },
+  "snyk": true
 }
